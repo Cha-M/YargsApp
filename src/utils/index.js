@@ -1,17 +1,19 @@
-const movieArr = [];
+const movieArrI = [];
 
 class Movie {
-    constructor (title, actor = "You don't know who.") {
+    constructor (title, actor = "unknown actor", director = "unknown director") {
         this.title = title;
-        this.actor = actor;        
+        this.actor = actor;
+        this.director = director;     
     }
     add() {
-        movieArr.push(this);
+        movieArrI.push(this);
     }
 
     list() {
-        return movieArr;
+        return movieArrI;
     }
 }
 
 module.exports = Movie;
+// module.exports = movieArrI;
