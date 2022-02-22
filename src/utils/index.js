@@ -1,11 +1,23 @@
 const movieArrI = [];
 
 class Movie {
-    constructor (title, actor = "unknown actor", director = "unknown director") {
+    constructor (title = "unknown title", actor = "unknown actor", director = "unknown director") {
+
         this.title = title;
         this.actor = actor;
-        this.director = director;     
+        this.director = director;
+        if (this.title === true) {
+            this.title = "unknown title";
+        }       
+        if (this.actor === true) {
+            this.actor = "unknown actor";
+        }
+        if (this.director === true) {
+            this.director = "unknown director";
+        }
+
     }
+
     add() {
         movieArrI.push(this);
     }
